@@ -25,9 +25,8 @@
     
     MenuViewController *menuViewController = [[MenuViewController alloc] initWithNibName:nil bundle:nil];
     
-    
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:menuViewController];
-    navigationController.delegate = self;
+    navigationController.delegate = self; // AppDelegate adopts <UINavigationControllerDelegate>
     [navigationController setNavigationBarHidden:YES];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -36,6 +35,8 @@
     [self.window makeKeyAndVisible];
     return YES;
 }
+
+// NavigationController delegate methods to hide the NavigationBar on the landing MenuViewController
 
 -(void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
     if([NSStringFromClass([viewController class]) isEqualToString:@"MenuViewController"]){
