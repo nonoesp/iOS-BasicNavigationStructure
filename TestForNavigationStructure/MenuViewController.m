@@ -23,14 +23,14 @@
         
         // Button for View Controller A        
         UIButton *menuButtonA = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height/2)];
-        menuButtonA.backgroundColor = [UIColor colorWithRed:(80.0/255.0) green:(240/255.0) blue:(130/255.0) alpha:1.0];
+        menuButtonA.backgroundColor = [UIColor colorWithRed:(80.0/255.0) green:(240/255.0) blue:(130/255.0) alpha:0.75];
         [menuButtonA addTarget:self action:@selector(pushViewControllerA:) forControlEvents:UIControlEventTouchUpInside];
         
         [self.view addSubview:menuButtonA];
         
         // Button for View Controller B
         UIButton *menuButtonB = [[UIButton alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height/2, self.view.frame.size.width, self.view.frame.size.height/2)];
-        menuButtonB.backgroundColor = [UIColor colorWithRed:(250/255.0) green:(120/255.0) blue:(50/255.0) alpha:1];
+        menuButtonB.backgroundColor = [UIColor colorWithRed:(250/255.0) green:(120/255.0) blue:(50/255.0) alpha:0.75];
         [menuButtonB addTarget:self action:@selector(pushViewControllerB:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:menuButtonB];
     }
